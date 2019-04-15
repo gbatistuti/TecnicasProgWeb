@@ -1,7 +1,5 @@
 package br.com.bandtec.projetopw.domain;
 
-import java.util.UUID;
-
 import javax.persistence.Embeddable;
 
 @Embeddable
