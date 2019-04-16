@@ -1,10 +1,12 @@
 package br.com.bandtec.projetopw.domain;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity @Table(name = "contasCorrentes")
@@ -14,6 +16,9 @@ public class ContaCorrente {
 	private String banco;
 	private String agencia;
 	private String conta;
+	
+	@OneToMany(mappedBy="contaCorrente")
+	private List<Lancamento> lancamentos;
 	
 	public ContaCorrente() {}
 	
