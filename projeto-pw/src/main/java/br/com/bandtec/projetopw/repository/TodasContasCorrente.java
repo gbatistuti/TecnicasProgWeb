@@ -10,10 +10,9 @@ import org.springframework.stereotype.Repository;
 import br.com.bandtec.projetopw.domain.ContaCorrente;
 
 @Repository
-public interface TodasContasCorrentes extends JpaRepository<ContaCorrente, UUID> {
+public interface TodasContasCorrente extends JpaRepository<ContaCorrente, UUID> {
 
-	@Query("from ContaCorrente where conta = ?1")
-	List<ContaCorrente> comConta(String string);
+	@Query("from ContaCorrente where banco = ?1")
+	List<ContaCorrente> doBanco(String banco);
 
-	
 }

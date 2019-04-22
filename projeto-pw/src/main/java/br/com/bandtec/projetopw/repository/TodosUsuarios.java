@@ -15,9 +15,8 @@ public interface TodosUsuarios extends JpaRepository<Usuario, UUID> {
 
 	@Query("from Usuario")
 	public boolean contemUsuarioComEssas(Credenciais credenciais);
-	
+
 	@Query("from Usuario where login = ?1")
-	public List<Usuario> comLogin(String login);
-	
-	
+	public List<Usuario> comNome(String nome);
+		
 }

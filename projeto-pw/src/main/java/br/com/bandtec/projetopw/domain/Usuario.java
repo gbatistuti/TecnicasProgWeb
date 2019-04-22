@@ -7,34 +7,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity @Table(name = "usuarios")
+@Entity
+@Table(name="usuarios")
 public class Usuario {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	private UUID id;
 	private String login;
 	private String senha;
 	
-	public Usuario() {}
+	protected Usuario() {}
 	
-	public Usuario(String login, String senha){ 
+	public Usuario(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
 	}
-	
-	public UUID getID() {
+
+	public UUID getId() {
 		return id;
 	}
 
-	public void atualizarSenha(String senha) {
-		this.senha = senha;
+	public void atualizarSenha(String novaSenha) {
+		this.senha = novaSenha;
 	}
 
-	public Object getSenha() {
-		return this.senha;
+	public String getSenha() {
+		return senha;
 	}
-
-
-	
-	
 }

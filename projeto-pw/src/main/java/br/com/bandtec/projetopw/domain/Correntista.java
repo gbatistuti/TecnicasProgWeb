@@ -9,36 +9,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-
-@Table(name = "correntistas")
-// determina qual a tabela e o nome dela,
-// caso não coloque, a tabela vai com o nome da classe
+@Table(name="correntistas")
 public class Correntista {
 
 	@Id
 	@GeneratedValue
-	// o sistema quem está gerando o valor do id que será
-	// persistido no banco de dados
 	private UUID id;
-
-	private Nome nome;
-	private Cpf cpf;
-
+	
+	private final String nome;
 	@Embedded
-	// o Endereço está embutido no Correntista
-	private Endereco endereco;
-
-	public Correntista() {
-	}
-
-	public Correntista(Nome nome, Cpf cpf, Endereco endereco) {
+	private final CPF cpf;
+	
+	@Embedded
+	private final Endereco endereco;
+	
+	public Correntista(String nome, String cpf, Endereco endereco) {
 		this.nome = nome;
-		this.cpf = cpf;
+		this.cpf = new CPF(cpf);
 		this.endereco = endereco;
 	}
 
 	public UUID getId() {
 		return id;
 	}
-
 }

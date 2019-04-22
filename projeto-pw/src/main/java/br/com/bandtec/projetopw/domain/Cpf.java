@@ -3,21 +3,15 @@ package br.com.bandtec.projetopw.domain;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Cpf {
-
+public class CPF {
+	
 	private String cpf;
 	
-	public Cpf() {}
-
-	public Cpf(String cpf) {
+	private CPF() {
+		
+	}
+	
+	public CPF(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	public String getCpf() {
-		return cpf;
-	}
-
-
-	
-	
 }

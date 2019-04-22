@@ -11,26 +11,30 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="lancamentos")
-public class Lancamento {
+@Table(name="revistas")
+public class Revista {
 	
 	@Id
 	@GeneratedValue
 	private UUID id;
-	private final String descricao;
-	private final double valor;
-	
+	private String nome;
+	private Integer edicao;
+		
 	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="conta_corrente_id")
-	private final ContaCorrente contaCorrente;
-	
-	public Lancamento(String descricao, double valor, ContaCorrente contaCorrente) {
-		this.descricao = descricao;
-		this.valor = valor;
-		this.contaCorrente = contaCorrente;
+	@JoinColumn(name="editora_id")
+	private Editora editora;
+
+	public Revista(String nome, Integer edicao, Editora editora) {
+		this.nome = nome;
+		this.edicao = edicao;
+		this.editora = editora;
 	}
+	
+	public Revista() {}
 
 	public UUID getId() {
 		return id;
 	}
+
+	
 }

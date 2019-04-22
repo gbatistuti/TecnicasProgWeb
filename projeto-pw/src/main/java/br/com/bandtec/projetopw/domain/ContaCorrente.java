@@ -1,5 +1,6 @@
 package br.com.bandtec.projetopw.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -9,9 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity @Table(name = "contasCorrentes")
+@Entity
+@Table(name="contas_corrente")
 public class ContaCorrente {
-	@Id @GeneratedValue
+	
+	@Id
+	@GeneratedValue
 	private UUID id;
 	private String banco;
 	private String agencia;
@@ -20,30 +24,32 @@ public class ContaCorrente {
 	@OneToMany(mappedBy="contaCorrente")
 	private List<Lancamento> lancamentos;
 	
-	public ContaCorrente() {}
+	protected ContaCorrente() {}
 	
 	public ContaCorrente(String banco, String agencia, String conta) {
-		super();
 		this.banco = banco;
 		this.agencia = agencia;
 		this.conta = conta;
+		this.lancamentos = new ArrayList<>();
 	}
 
 	public UUID getId() {
 		return id;
 	}
 
-	public void atualizarConta(String conta) {
-		
-		this.conta = conta;
-		
+	public void atualizarAgencia(String agencia) {
+		this.agencia = agencia;
 	}
 
-	public Object getConta() {
-		return this.conta;
+	public String getAgencia() {
+		return agencia;
 	}
 
-	
-	
+	public void adicionar(Lancamento umLancamento) {
+		this.lancamentos.add(umLancamento);
+	}
 
+	public List<Lancamento> getLancamentos() {
+		return lancamentos;
+	}
 }
