@@ -16,6 +16,7 @@ public class Editora {
 	@Id
 	@GeneratedValue
 	private UUID id;
+	
 	private String nome;
 	
 	@OneToMany(mappedBy = "editora")

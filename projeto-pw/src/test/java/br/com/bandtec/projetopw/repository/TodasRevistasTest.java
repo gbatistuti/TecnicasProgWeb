@@ -20,7 +20,6 @@ import br.com.bandtec.projetopw.domain.Revista;
 public class TodasRevistasTest {
 
 	private Revista novaVeja;
-	private Editora nova;
 	
 	@Autowired
 	private TodasRevistas todasRevistas;
@@ -29,7 +28,7 @@ public class TodasRevistasTest {
 	 
 	@Before
 	public void setUp() {
-		nova = new Editora("Nova");
+		Editora nova = new Editora("Nova");
 		novaVeja = new Revista(nomeRevista, 12, nova);
 		todasRevistas.save(novaVeja);
 	}

@@ -3,6 +3,7 @@ package br.com.bandtec.projetopw.domain;
 import java.util.UUID;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,7 +18,8 @@ public class Revista {
 	@Id
 	@GeneratedValue
 	private UUID id;
-	private String nome;
+	
+	private String nomeRevista;
 	private Integer edicao;
 		
 	@ManyToOne(cascade=CascadeType.ALL)
@@ -25,7 +27,7 @@ public class Revista {
 	private Editora editora;
 
 	public Revista(String nome, Integer edicao, Editora editora) {
-		this.nome = nome;
+		this.nomeRevista = nome;
 		this.edicao = edicao;
 		this.editora = editora;
 	}
