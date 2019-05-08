@@ -13,11 +13,14 @@ import br.com.bandtec.projetopw.domain.Usuario;
 @Repository
 public interface TodosUsuarios extends JpaRepository<Usuario, UUID> {
 
-	@Query("from Usuario")
+	@Query("select count(u) > 0 from Usuario u where u.credenciais = ?1 ")
 	public boolean contemUsuarioComEssas(Credenciais credenciais);
 	
-	@Query("from Usuario where login = ?1")
+	@Query("select u from Usuario where u.login = ?1")
 	public List<Usuario> comLogin(String login);
+
+	@Query("select u from Usuario where u.nome = ?1")
+	public List<Usuario> comNome(String nome);
 	
 	
 }

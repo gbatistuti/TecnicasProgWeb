@@ -7,19 +7,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.bandtec.projetopw.controller.Credenciais;
+
 @Entity @Table(name = "usuarios")
 public class Usuario {
 
 	@Id @GeneratedValue
 	private UUID id;
-	private String login;
-	private String senha;
+	@JsonProperty
+	private Credenciais credenciais;
 	
 	public Usuario() {}
 	
-	public Usuario(String login, String senha){ 
-		this.login = login;
-		this.senha = senha;
+	public Usuario(Credenciais credenciais){ 
+		this.credenciais = credenciais;
 	}
 	
 	public UUID getID() {
@@ -27,14 +31,12 @@ public class Usuario {
 	}
 
 	public void atualizarSenha(String senha) {
-		this.senha = senha;
+		credenciais.setSenha(senha);
 	}
 
-	public Object getSenha() {
-		return this.senha;
+	@JsonIgnore
+	public String getSenha() {
+		return credenciais.getSenha();
 	}
 
-
-	
-	
 }
