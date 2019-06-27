@@ -1,0 +1,835 @@
+2019-04-07 16:50:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1502)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:476)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.getAutoCommit(HikariProxyConnection.java)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:77)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:53)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:536)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:815)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:496)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:679)
+	at com.sun.proxy.$Proxy89.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:599)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1052)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1059)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1035)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1011)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:931)
+2019-04-07 16:50:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1502)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:663)
+	at com.zaxxer.hikari.pool.ProxyConnection.close(ProxyConnection.java:242)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.releaseConnection(JdbcEnvironmentInitiator.java:185)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.release(DdlTransactionIsolatorNonJtaImpl.java:83)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.release(GenerationTargetToDatabase.java:90)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:547)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:815)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:496)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:679)
+	at com.sun.proxy.$Proxy89.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:599)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1052)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1059)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1035)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1011)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:931)
+2019-04-14 14:43:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "LANÇAMENTOS" not found; SQL statement:
+select * from lançamentos [42102-197]
+2019-04-14 14:56:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "LANÇAMENTOS" not found; SQL statement:
+select * from lançamentos [42102-197]
+2019-04-15 10:22:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "REVISTAS" not found; SQL statement:
+delete from revistas [42102-197]
+2019-04-22 17:43:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+    ALTER TABLE PROJETO-[*]PW.PUBLIC.REVISTAS 
+       ADD COLUMN NOME_REVISTA VARCHAR(255) "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+
+    alter table PROJETO-PW.PUBLIC.REVISTAS 
+       add column nome_revista varchar(255) [42001-197]
+2019-04-22 17:43:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+    ALTER TABLE PROJETO-[*]PW.PUBLIC.REVISTAS 
+       ADD COLUMN NOME_REVISTA VARCHAR(255) "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+
+    alter table PROJETO-PW.PUBLIC.REVISTAS 
+       add column nome_revista varchar(255) [42001-197]
+2019-04-22 17:44:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+    ALTER TABLE PROJETO-[*]PW.PUBLIC.REVISTAS 
+       ADD COLUMN NOME_REVISTA VARCHAR(255) "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+
+    alter table PROJETO-PW.PUBLIC.REVISTAS 
+       add column nome_revista varchar(255) [42001-197]
+2019-04-22 17:44:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NOME_REVISTA" not found; SQL statement:
+insert into revistas (edicao, editora_id, nome_revista, id) values (?, ?, ?, ?) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:311)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$1.doPrepare(StatementPreparerImpl.java:87)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:78)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3152)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3686)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:90)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356)
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:50)
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1415)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1501)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1537)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1505)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1553)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:91)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:136)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:125)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:605)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy106.comNome(Unknown Source)
+	at br.com.bandtec.projetopw.repository.TodasRevistasTest.buscarUmaRevistaPeloSeuNome(TodasRevistasTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2019-04-22 17:45:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+    ALTER TABLE PROJETO-[*]PW.PUBLIC.REVISTAS 
+       ADD COLUMN NOME_REVISTA VARCHAR(255) "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+
+    alter table PROJETO-PW.PUBLIC.REVISTAS 
+       add column nome_revista varchar(255) [42001-197]
+2019-04-22 17:45:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NOME_REVISTA" not found; SQL statement:
+insert into revistas (edicao, editora_id, nome_revista, id) values (?, ?, ?, ?) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:311)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$1.doPrepare(StatementPreparerImpl.java:87)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:172)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:78)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3152)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3686)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:90)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356)
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:50)
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1415)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1501)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1537)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1505)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1553)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:91)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:136)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:125)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:605)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy105.comNome(Unknown Source)
+	at br.com.bandtec.projetopw.repository.TodasRevistasTest.buscarUmaRevistaPeloSeuNome(TodasRevistasTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2019-05-05 11:29:30 database: wrong user or password; user: "S"
+org.h2.message.DbException: Wrong user name or password [28000-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:107)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:112)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$617fb6f5.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$617fb6f5$$FastClassBySpringCGLIB$$eb952f5c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$617fb6f5.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1244)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1244)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at br.com.bandtec.projetopw.ProjetoPwApplication.main(ProjetoPwApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 90 more
+2019-05-05 11:29:37 database: wrong user or password; user: "S"
+org.h2.message.DbException: Wrong user name or password [28000-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:107)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at br.com.bandtec.projetopw.ProjetoPwApplication.main(ProjetoPwApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 63 more
+2019-05-19 15:30:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CIDADAO0_.ID AS ID1_0_0_, CONSULTANO1_.ID AS ID1_1_1_, CIDADAO0_.CPF AS CPF2_0_0_, CIDADAO0_.IDADE AS IDADE3_0_0_, CIDADAO0_.NOME AS NOME4_0_0_, CONSULTANO1_.CIDADAO_ID AS CIDADAO_4_1_1_, CONSULTANO1_.DATA AS DATA2_1_1_, CONSULTANO1_.ESPECIALIDADE AS ESPECIAL3_1_1_ FROM CIDADOES CIDADAO0_ INNER JOIN CONSULTAS_SUS CONSULTANO1_ ON WHERE[*] CIDADAO0_.CPF=? "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select cidadao0_.id as id1_0_0_, consultano1_.id as id1_1_1_, cidadao0_.cpf as cpf2_0_0_, cidadao0_.idade as idade3_0_0_, cidadao0_.nome as nome4_0_0_, consultano1_.cidadao_id as cidadao_4_1_1_, consultano1_.data as data2_1_1_, consultano1_.especialidade as especial3_1_1_ from cidadoes cidadao0_ inner join consultas_sus consultano1_ on where cidadao0_.cpf=? [42001-197]
+2019-05-19 15:31:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CIDADAO0_.ID AS ID1_0_0_, CONSULTANO1_.ID AS ID1_1_1_, CIDADAO0_.CPF AS CPF2_0_0_, CIDADAO0_.IDADE AS IDADE3_0_0_, CIDADAO0_.NOME AS NOME4_0_0_, CONSULTANO1_.CIDADAO_ID AS CIDADAO_4_1_1_, CONSULTANO1_.DATA AS DATA2_1_1_, CONSULTANO1_.ESPECIALIDADE AS ESPECIAL3_1_1_ FROM CIDADOES CIDADAO0_ INNER JOIN CONSULTAS_SUS CONSULTANO1_ ON WHERE[*] CIDADAO0_.CPF=? "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select cidadao0_.id as id1_0_0_, consultano1_.id as id1_1_1_, cidadao0_.cpf as cpf2_0_0_, cidadao0_.idade as idade3_0_0_, cidadao0_.nome as nome4_0_0_, consultano1_.cidadao_id as cidadao_4_1_1_, consultano1_.data as data2_1_1_, consultano1_.especialidade as especial3_1_1_ from cidadoes cidadao0_ inner join consultas_sus consultano1_ on where cidadao0_.cpf=? [42001-197]
+2019-05-19 15:32:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CIDADAO0_.ID AS ID1_0_0_, CONSULTANO1_.ID AS ID1_1_1_, CIDADAO0_.CPF AS CPF2_0_0_, CIDADAO0_.IDADE AS IDADE3_0_0_, CIDADAO0_.NOME AS NOME4_0_0_, CONSULTANO1_.CIDADAO_ID AS CIDADAO_4_1_1_, CONSULTANO1_.DATA AS DATA2_1_1_, CONSULTANO1_.ESPECIALIDADE AS ESPECIAL3_1_1_ FROM CIDADOES CIDADAO0_ INNER JOIN CONSULTAS_SUS CONSULTANO1_ ON WHERE[*] CIDADAO0_.CPF=? "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select cidadao0_.id as id1_0_0_, consultano1_.id as id1_1_1_, cidadao0_.cpf as cpf2_0_0_, cidadao0_.idade as idade3_0_0_, cidadao0_.nome as nome4_0_0_, consultano1_.cidadao_id as cidadao_4_1_1_, consultano1_.data as data2_1_1_, consultano1_.especialidade as especial3_1_1_ from cidadoes cidadao0_ inner join consultas_sus consultano1_ on where cidadao0_.cpf=? [42001-197]
+2019-05-19 15:32:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CIDADAO0_.ID AS ID1_0_, CIDADAO0_.CPF AS CPF2_0_, CIDADAO0_.IDADE AS IDADE3_0_, CIDADAO0_.NOME AS NOME4_0_ FROM CIDADOES CIDADAO0_ INNER JOIN CONSULTAS_SUS CONSULTANO1_ ON WHERE[*] CIDADAO0_.CPF=? "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select cidadao0_.id as id1_0_, cidadao0_.cpf as cpf2_0_, cidadao0_.idade as idade3_0_, cidadao0_.nome as nome4_0_ from cidadoes cidadao0_ inner join consultas_sus consultano1_ on where cidadao0_.cpf=? [42001-197]
+2019-05-19 15:35:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CIDADAO0_.ID AS ID1_0_, CIDADAO0_.CPF AS CPF2_0_, CIDADAO0_.IDADE AS IDADE3_0_, CIDADAO0_.NOME AS NOME4_0_ FROM CIDADOES CIDADAO0_ INNER JOIN CONSULTAS_SUS CONSULTANO1_ ON WHERE[*] CIDADAO0_.CPF=? "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select cidadao0_.id as id1_0_, cidadao0_.cpf as cpf2_0_, cidadao0_.idade as idade3_0_, cidadao0_.nome as nome4_0_ from cidadoes cidadao0_ inner join consultas_sus consultano1_ on where cidadao0_.cpf=? [42001-197]
+2019-05-25 18:19:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CIDADOES" not found; SQL statement:
+drop table cidadoes [42102-197]
+2019-05-25 18:19:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CIDADOES" not found; SQL statement:
+drop table cidadoes [42102-197]
+2019-05-25 18:19:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CIDADOES" not found; SQL statement:
+drop table cidadoes [42102-197]
+2019-05-25 18:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CIDADOES" not found; SQL statement:
+drop table cidadoes [42102-197]
+2019-05-25 18:19:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:19:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CONSULTAS_SUS" not found; SQL statement:
+drop table consultas_sus [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 18:26:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DETALHES_PAGAMENTOS" not found; SQL statement:
+delete FROM DETALHES_PAGAMENTOS [42102-197]
+2019-05-25 19:18:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:18:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:20:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:23:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:29:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:31:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROCESSADORES" not found; SQL statement:
+drop table processadores [42102-197]
+2019-05-25 19:32:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:32:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-25 19:32:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "COMPUTADORES" not found; SQL statement:
+drop table computadores [42102-197]
+2019-05-26 22:32:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TÉCNICOS" not found; SQL statement:
+drop table técnicos [42102-197]
+2019-05-26 22:32:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TIMES" not found; SQL statement:
+drop table times [42102-197]
+2019-05-26 22:32:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TÉCNICOS" not found; SQL statement:
+drop table técnicos [42102-197]
